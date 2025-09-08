@@ -27,7 +27,7 @@ export {};
 
 declare module "$app/types" {
 	export interface AppTypes {
-		RouteId(): "/" | "/kitchen" | "/kitchen/cookie-roulette" | "/kitchen/error-oracle" | "/kitchen/primordial-soup" | "/kitchen/scroll-yoga" | "/map";
+		RouteId(): "/" | "/kitchen" | "/kitchen/cookie-roulette" | "/kitchen/error-oracle" | "/kitchen/primordial-soup" | "/kitchen/scroll-yoga" | "/map" | "/wunschmaschine-pure" | "/wunschmaschine";
 		RouteParams(): {
 			
 		};
@@ -38,9 +38,11 @@ declare module "$app/types" {
 			"/kitchen/error-oracle": Record<string, never>;
 			"/kitchen/primordial-soup": Record<string, never>;
 			"/kitchen/scroll-yoga": Record<string, never>;
-			"/map": Record<string, never>
+			"/map": Record<string, never>;
+			"/wunschmaschine-pure": Record<string, never>;
+			"/wunschmaschine": Record<string, never>
 		};
-		Pathname(): "/" | "/kitchen" | "/kitchen/" | "/kitchen/cookie-roulette" | "/kitchen/cookie-roulette/" | "/kitchen/error-oracle" | "/kitchen/error-oracle/" | "/kitchen/primordial-soup" | "/kitchen/primordial-soup/" | "/kitchen/scroll-yoga" | "/kitchen/scroll-yoga/" | "/map" | "/map/";
+		Pathname(): "/" | "/kitchen" | "/kitchen/" | "/kitchen/cookie-roulette" | "/kitchen/cookie-roulette/" | "/kitchen/error-oracle" | "/kitchen/error-oracle/" | "/kitchen/primordial-soup" | "/kitchen/primordial-soup/" | "/kitchen/scroll-yoga" | "/kitchen/scroll-yoga/" | "/map" | "/map/" | "/wunschmaschine-pure" | "/wunschmaschine-pure/" | "/wunschmaschine" | "/wunschmaschine/";
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
 		Asset(): "/favicon.svg" | string & {};
 	}

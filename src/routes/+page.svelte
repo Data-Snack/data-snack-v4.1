@@ -180,6 +180,7 @@
 					<span class="metric">OPERATORS: 5</span>
 					<span class="metric">PLATEAUS: 5</span>
 					<span class="metric">PATHS: ∞</span>
+					<a href="/wunschmaschine" class="metric-link">ABSTRACT_MACHINE →</a>
 				</div>
 			</div>
 		</footer>
@@ -636,6 +637,22 @@
 		font-size: 0.75rem;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
+	}
+	
+	.metric-link {
+		color: var(--yellow);
+		font-size: 0.75rem;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		text-decoration: none;
+		transition: all 0.3s;
+		padding: 0.25rem 0.5rem;
+		border: 1px solid transparent;
+	}
+	
+	.metric-link:hover {
+		border-color: var(--yellow);
+		box-shadow: 0 0 20px rgba(255, 255, 0, 0.3);
 	}
 
 	@media (max-width: 1024px) {

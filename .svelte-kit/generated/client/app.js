@@ -8,7 +8,9 @@ export const nodes = [
 	() => import('./nodes/4'),
 	() => import('./nodes/5'),
 	() => import('./nodes/6'),
-	() => import('./nodes/7')
+	() => import('./nodes/7'),
+	() => import('./nodes/8'),
+	() => import('./nodes/9')
 ];
 
 export const server_loads = [];
@@ -19,7 +21,9 @@ export const dictionary = {
 		"/kitchen/error-oracle": [4],
 		"/kitchen/primordial-soup": [5],
 		"/kitchen/scroll-yoga": [6],
-		"/map": [7]
+		"/map": [7],
+		"/wunschmaschine-pure": [9],
+		"/wunschmaschine": [8]
 	};
 
 export const hooks = {
