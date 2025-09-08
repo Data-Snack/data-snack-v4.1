@@ -1,1 +1,1 @@
-export { default as component } from "../../../../src/routes/kitchen/primordial-soup/+page.svelte";
+export { default as component } from "../../../../src/routes/kitchen/cookie-roulette/+page.svelte";
