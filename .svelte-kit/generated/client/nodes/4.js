@@ -1,1 +1,1 @@
-export { default as component } from "../../../../src/routes/kitchen/error-oracle/+page.svelte";
+export { default as component } from "../../../../src/routes/aesthetic-research/+page.svelte";

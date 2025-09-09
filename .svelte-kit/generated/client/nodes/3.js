@@ -1,1 +1,1 @@
-export { default as component } from "../../../../src/routes/kitchen/cookie-roulette/+page.svelte";
+export { default as component } from "../../../../src/routes/abstract-machine/+page.svelte";

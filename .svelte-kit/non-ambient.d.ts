@@ -27,12 +27,14 @@ export {};
 
 declare module "$app/types" {
 	export interface AppTypes {
-		RouteId(): "/" | "/kitchen" | "/kitchen/cookie-roulette" | "/kitchen/error-oracle" | "/kitchen/primordial-soup" | "/kitchen/scroll-yoga" | "/map" | "/wunschmaschine-pure" | "/wunschmaschine";
+		RouteId(): "/" | "/abstract-machine" | "/aesthetic-research" | "/kitchen" | "/kitchen/cookie-roulette" | "/kitchen/error-oracle" | "/kitchen/primordial-soup" | "/kitchen/scroll-yoga" | "/map" | "/wunschmaschine-pure" | "/wunschmaschine";
 		RouteParams(): {
 			
 		};
 		LayoutParams(): {
 			"/": Record<string, never>;
+			"/abstract-machine": Record<string, never>;
+			"/aesthetic-research": Record<string, never>;
 			"/kitchen": Record<string, never>;
 			"/kitchen/cookie-roulette": Record<string, never>;
 			"/kitchen/error-oracle": Record<string, never>;
@@ -42,7 +44,7 @@ declare module "$app/types" {
 			"/wunschmaschine-pure": Record<string, never>;
 			"/wunschmaschine": Record<string, never>
 		};
-		Pathname(): "/" | "/kitchen" | "/kitchen/" | "/kitchen/cookie-roulette" | "/kitchen/cookie-roulette/" | "/kitchen/error-oracle" | "/kitchen/error-oracle/" | "/kitchen/primordial-soup" | "/kitchen/primordial-soup/" | "/kitchen/scroll-yoga" | "/kitchen/scroll-yoga/" | "/map" | "/map/" | "/wunschmaschine-pure" | "/wunschmaschine-pure/" | "/wunschmaschine" | "/wunschmaschine/";
+		Pathname(): "/" | "/abstract-machine" | "/abstract-machine/" | "/aesthetic-research" | "/aesthetic-research/" | "/kitchen" | "/kitchen/" | "/kitchen/cookie-roulette" | "/kitchen/cookie-roulette/" | "/kitchen/error-oracle" | "/kitchen/error-oracle/" | "/kitchen/primordial-soup" | "/kitchen/primordial-soup/" | "/kitchen/scroll-yoga" | "/kitchen/scroll-yoga/" | "/map" | "/map/" | "/wunschmaschine-pure" | "/wunschmaschine-pure/" | "/wunschmaschine" | "/wunschmaschine/";
 		ResolvedPathname(): `${"" | `/${string}`}${ReturnType<AppTypes['Pathname']>}`;
 		Asset(): "/favicon.svg" | string & {};
 	}

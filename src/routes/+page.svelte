@@ -3,6 +3,7 @@
 	import Matrix from '$lib/components/Matrix.svelte';
 	import DataOrb from '$lib/components/DataOrb.svelte';
 	import Cartography from '$lib/components/Cartography.svelte';
+	import PerzeptVisualizer from '$lib/components/PerzeptVisualizer.svelte';
 	
 	let phase = 'boot';
 	let bootSequence = [
@@ -118,6 +119,14 @@
 							[FULL_MAP] →
 						</a>
 					</div>
+					
+					<!-- Perzept Engine Visualizer -->
+					<div class="perzept-display">
+						<PerzeptVisualizer />
+					</div>
+					<div class="perzept-label">
+						PERZEPT_ENGINE: <span class="highlight">CROSS-SNACK DATA FLOW</span>
+					</div>
 				</div>
 
 				<div class="right-panel panel neon-box">
@@ -180,7 +189,7 @@
 					<span class="metric">OPERATORS: 5</span>
 					<span class="metric">PLATEAUS: 5</span>
 					<span class="metric">PATHS: ∞</span>
-					<a href="/wunschmaschine" class="metric-link">ABSTRACT_MACHINE →</a>
+					<a href="/abstract-machine" class="metric-link">ABSTRACT_MACHINE →</a>
 				</div>
 			</div>
 		</footer>
@@ -387,6 +396,23 @@
 		font-size: 0.75rem;
 		text-transform: uppercase;
 		letter-spacing: 0.1em;
+		margin-bottom: 2rem;
+	}
+	
+	.perzept-display {
+		width: 100%;
+		max-width: 600px;
+		height: 300px;
+		position: relative;
+		margin-top: 2rem;
+	}
+	
+	.perzept-label {
+		color: var(--text-secondary);
+		font-size: 0.75rem;
+		text-transform: uppercase;
+		letter-spacing: 0.1em;
+		margin-top: 1rem;
 	}
 
 	.highlight {

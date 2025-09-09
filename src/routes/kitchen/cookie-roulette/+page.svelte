@@ -2,6 +2,7 @@
 	import { onMount, onDestroy } from 'svelte';
 	import { fade, fly, scale } from 'svelte/transition';
 	import { quintOut, elasticOut } from 'svelte/easing';
+	import { snackPerzepts } from '$lib/stores/perzeptEngine.js';
 	
 	// Game States
 	let gamePhase = 'LOADING'; // LOADING -> READY -> SPINNING -> FIRED -> RESULT
@@ -206,6 +207,9 @@
 		isSpinning = true;
 		gamePhase = 'SPINNING';
 		
+		// Generate anxiety perzept
+		snackPerzepts.cookieRoulette.anxiety(stats.shotsTotal + 1);
+		
 		// Play spin sound
 		if (window.spinSound) window.spinSound();
 		
@@ -234,6 +238,9 @@
 		gamePhase = 'FIRED';
 		stats.shotsTotal++;
 		
+		// Generate danger perzept based on chamber risk
+		snackPerzepts.cookieRoulette.danger(currentChamber / 6);
+		
 		// Click sound
 		if (clickSound) clickSound();
 		
@@ -247,6 +254,11 @@
 				activateTrackers(chamber);
 				glitchActive = true;
 				stats.privacyHealth -= chamber.severity * 10;
+				
+				// Generate surveillance perzept based on severity
+				snackPerzepts.cookieRoulette.surveillance(chamber.severity);
+				snackPerzepts.cookieRoulette.danger(chamber.severity / 10);
+				
 				gamePhase = 'HIT';
 				
 				// Glitch effect

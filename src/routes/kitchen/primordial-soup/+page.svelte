@@ -1,6 +1,7 @@
 <script>
 	import { onMount } from 'svelte';
 	import { fade, fly } from 'svelte/transition';
+	import { snackPerzepts } from '$lib/stores/perzeptEngine.js';
 	
 	// Die 5 Operatoren
 	const operators = [
@@ -57,6 +58,10 @@
 		temperature += 50;
 		entropy += Math.random() * 10;
 		
+		// Generate perzepts for operator mixing
+		snackPerzepts.primordialSoup.mixture(selectedOperators.length);
+		snackPerzepts.primordialSoup.emergence(entropy / 100);
+		
 		// Generate visual effect
 		createRipple(op.color);
 		
@@ -90,6 +95,10 @@
 		phase = 'SYNTHESIS';
 		temperature = 373; // Boiling point
 		entropy = 100;
+		
+		// Generate transformation perzept during catalysis
+		snackPerzepts.primordialSoup.transformation(1.0);
+		snackPerzepts.primordialSoup.emergence(1.0);
 		
 		// Generate unique result code
 		const hash = selectedOperators

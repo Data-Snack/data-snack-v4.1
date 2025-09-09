@@ -1,1 +1,1 @@
-export { default as component } from "../../../../src/routes/wunschmaschine-pure/+page.svelte";
+export { default as component } from "../../../../src/routes/map/+page.svelte";

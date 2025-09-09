@@ -1,1 +1,1 @@
-export { default as component } from "../../../../src/routes/wunschmaschine/+page.svelte";
+export { default as component } from "../../../../src/routes/kitchen/scroll-yoga/+page.svelte";
